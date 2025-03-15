@@ -569,3 +569,18 @@ footer {
     padding: 20px;
   }
 }
+
+.navbar {
+  display: flex;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  align-content: space-around;
+}
+
+li {
+  flex: 1;
+  margin: 2rem;
+}
