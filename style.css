@@ -13,7 +13,7 @@ nav {
   color: white;
   padding: 20px 50px;
 }
-
+                                         
 .navTop {
   display: flex;
   align-items: center;
@@ -46,7 +46,15 @@ nav {
 .navBottom {
   display: flex;
   align-items: center;
+  padding: 20px 50px;
+  background-color: #111;
   justify-content: center;
+}
+
+.featured {
+  margin-right: 5rem;
+   font-size: 50px;
+   color: #fff;
 }
 
 .menuItem {
@@ -195,7 +203,7 @@ nav {
   height: 100vh;
   background-color: whitesmoke;
   position: relative;
-  clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+  /* clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%); */
 }
 
 .payment {
