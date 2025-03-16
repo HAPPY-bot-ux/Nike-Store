@@ -106,7 +106,7 @@ li {
 
 .sliderWrapper {
   display: flex;
-  width: 500vw;
+  width:  100vw;
   transition: all 1.5s ease-in-out;
 }
 
@@ -128,7 +128,15 @@ li {
 .sliderImg {
   z-index: 1;
 }
-
+.sliderTitle-1 {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  font-size: 60px;
+  font-weight: 900;  
+  color: black;
+  z-index: 1;
+}
 .sliderTitle {
   position: absolute;
   top: 10%;
