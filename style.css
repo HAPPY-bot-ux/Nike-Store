@@ -11,7 +11,7 @@ body {
 nav {
   background-color: #111;
   color: white;
-  padding: 20px 50px;
+  /* padding: 20px 50px; */
 }
                                          
 .navTop {
@@ -23,8 +23,9 @@ nav {
 .search {
   display: flex;
   align-items: center;
+  width: 195px;
   background-color: gray;
-  padding: 10px 20px;
+  padding: 10px 25px;
   border-radius: 10px;
 }
 
@@ -34,7 +35,7 @@ nav {
 }
 
 .searchInput::placeholder {
-  color: lightgray;
+  color: #fff;
 }
 
 .limitedOffer {
