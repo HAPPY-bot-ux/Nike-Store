@@ -13,7 +13,22 @@ nav {
   color: white;
   /* padding: 20px 50px; */
 }
-                                         
+     
+.navbar {
+  display: flex;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  align-content: space-around;
+}
+
+li {
+  flex: 1;
+  margin: 2rem;
+}
+
 .navTop {
   display: flex;
   align-items: center;
@@ -23,10 +38,11 @@ nav {
 .search {
   display: flex;
   align-items: center;
-  width: 195px;
+  width: 189px;
   background-color: gray;
   padding: 10px 25px;
   border-radius: 10px;
+  left: -10px;
 }
 
 .searchInput {
@@ -50,6 +66,23 @@ nav {
   padding: 20px 50px;
   background-color: #111;
   justify-content: center;
+}
+.icon-container {
+  display: flex;
+  gap: 15px; /* Space between icons */
+  font-size: 24px; /* Icon size */
+  align-items: center;
+  position: relative;  /* Ensure left positioning works */
+  left: -15px; /* Move the icons slightly to the left */
+}
+
+.searchIcon, .cartIcon, .heartIcon {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.searchIcon:hover, .cartIcon:hover, .heartIcon:hover {
+  transform: scale(1.2); /* Slight zoom effect on hover */
 }
 
 .featured {
@@ -571,17 +604,3 @@ footer {
   }
 }
 
-.navbar {
-  display: flex;
-}
-
-ul {
-  list-style: none;
-  display: flex;
-  align-content: space-around;
-}
-
-li {
-  flex: 1;
-  margin: 2rem;
-}
