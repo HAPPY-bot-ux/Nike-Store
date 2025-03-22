@@ -829,8 +829,7 @@ transform: translate(-5px);
 .card-btn {
     position: absolute;
     bottom: 20px;
-    left: 20px;
-    background: rgba(0, 0, 0, 0.6);
+    left: 20px;    
     padding: 10px 20px;
     color: #fff;
     text-decoration: none;
@@ -841,9 +840,6 @@ transform: translate(-5px);
     transition: background 0.3s ease;
 }
 
-.card-btn:hover {
-    background: rgba(0, 0, 0, 0.8);
-}
 
 .card-btn ion-icon {
     margin-left: 10px;
@@ -868,24 +864,47 @@ transform: translate(-5px);
 }
 
 .card-meta-list {
-    display: flex;
-    justify-content: space-between;
-    font-size: 1rem;
-    color: #777;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+  color: #777;
+  flex-wrap: wrap; /* Allow wrapping for better responsiveness */
+  gap: 10px; /* Add some space between items */
 }
 
 .card-meta-item {
-    list-style: none;
+  list-style: none;
+  white-space: nowrap; /* Prevents text from wrapping in individual items */
 }
 
 .card-meta-text {
-    text-decoration: none;
-    color: #3498db;
+  text-decoration: none;
+  color: #3498db;
+  transition: color 0.3s ease; /* Smooth transition for hover effect */
 }
 
 .card-meta-text:hover {
-    text-decoration: underline;
+  text-decoration: underline;
+  color: #2980b9; /* Change color on hover */
 }
+
+/* Handle longer text, ensuring it doesn't overflow */
+.card-meta-item time,
+.card-meta-item .card-meta-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%; /* Ensure the text stays within its container */
+  white-space: nowrap; /* Prevent line breaks */
+}
+
+/* Adjust for smaller screen sizes */
+@media (max-width: 768px) {
+  .card-meta-list {
+      flex-direction: column; /* Stack the items vertically on smaller screens */
+      align-items: flex-start; /* Align items to the left */
+  }
+}
+
 
 /* Responsive Styles */
 @media (max-width: 768px) {
@@ -904,4 +923,122 @@ transform: translate(-5px);
     }
 }
 
+
+
+/* From Uiverse.io by cssbuttons-io */ 
+button {
+position: relative;
+display: inline-block;
+cursor: pointer;
+outline: none;
+border: 0;
+vertical-align: middle;
+text-decoration: none;
+background: transparent;
+padding: 0;
+font-size: inherit;
+font-family: inherit;
+}
+
+button.learn-more {
+width: 12rem;
+height: auto;
+}
+
+button.learn-more .circle {
+transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+position: relative;
+display: block;
+margin: 0;
+width: 3rem;
+height: 3rem;
+background: #282936;
+border-radius: 1.625rem;
+}
+
+button.learn-more .circle .icon {
+transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+position: absolute;
+top: 0;
+bottom: 0;
+margin: auto;
+background: #fff;
+}
+
+button.learn-more .circle .icon.arrow {
+transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+left: 0.625rem;
+width: 1.125rem;
+height: 0.125rem;
+background: none;
+}
+
+button.learn-more .circle .icon.arrow::before {
+position: absolute;
+content: "";
+top: -0.29rem;
+right: 0.0625rem;
+width: 0.625rem;
+height: 0.625rem;
+border-top: 0.125rem solid #fff;
+border-right: 0.125rem solid #fff;
+transform: rotate(45deg);
+}
+
+button.learn-more .button-text {
+transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+position: absolute;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+padding: 0.75rem 0;
+margin: 0 0 0 1.85rem;
+color: #282936;
+font-weight: 700;
+line-height: 1.6;
+text-align: center;
+text-transform: uppercase;
+}
+
+button:hover .circle {
+width: 100%;
+}
+
+button:hover .circle .icon.arrow {
+background: #fff;
+transform: translate(1rem, 0);
+}
+
+button:hover .button-text {
+color: #fff;
+}
+
+
+    /* Style for the Back to Top button */
+.back-to-top-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    padding: 15px;
+    font-size: 20px;
+    cursor: pointer;
+    display: none; /* Initially hidden */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.3s ease;
+}
+
+.back-to-top-btn:hover {
+    background-color: #2980b9;
+    opacity: 0.8;
+}
+
+/* Smooth scrolling for the page */
+html {
+    scroll-behavior: smooth;
+}
 

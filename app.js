@@ -136,3 +136,24 @@ close.addEventListener("click", () => {
   payment.style.display = "none";
 });
 
+
+
+    // Get the button
+const backToTopButton = document.getElementById("back-to-top");
+
+// Show the button when the user scrolls down 300px from the top of the document
+window.onscroll = function () {
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        backToTopButton.style.display = "block"; // Show the button
+    } else {
+        backToTopButton.style.display = "none"; // Hide the button
+    }
+};
+
+// Scroll to the top of the page when the button is clicked
+backToTopButton.onclick = function () {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+};
+
+
+
