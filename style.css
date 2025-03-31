@@ -1355,10 +1355,9 @@ transform: translateY(0);
 /* Contact form css  */
    
 .contact-container {
-    background: white;
+  background: url("https://images.unsplash.com/photo-1604147495798-57beb5d6af73?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2370&q=80");
     padding: 30px;
     border-radius: 15px;
-    background: linear-gradient(135deg, #f5f5f5, #dcdcdc);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     width: 100%;
     max-width: 900px;
